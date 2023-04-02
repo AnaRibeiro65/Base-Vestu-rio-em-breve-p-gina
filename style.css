@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root{
+    --cor-marrom: hsl(0, 36%, 70%);
+    --cor-laranja:hsl(0, 93%, 68%);
+    --cor-marrom-preto:hsl(0, 6%, 24%);
+    --cor-branco:hsl(0, 100%, 98%);
+    --cor-vermenho-claro:hsl(0, 80%, 86%);
+}
+
+body{
+   background: var(--cor-branco);
+}
+
+main{
+    background-image: url(./images/bg-pattern-desktop.svg); 
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.logo_imag{
+    padding: 6em 3rem;
+}
+
+.imagem_mob{
+    display: none;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 5em;
+    color: var(--cor-marrom);
+    text-transform:uppercase; 
+    margin-left: 3.5rem;
+}
+
+h1 strong{
+    color: black;
+    font-weight: 600;
+}
+
+.texto{
+    margin: 1em 0;
+    margin-left: 3.5rem;
+    color: var(--cor-marrom);
+}
+
+.caixa_email{
+    position: relative;
+    margin-left: 3.5rem;
+    display: flex;
+    flex-direction: column
+}
+
+.inp_email{
+    width: 20vW;
+    height: 5.6vh;
+    border-radius: 3em;
+    border: 1px solid var(--cor-marrom);
+    padding: 0 2em;
+    font-size: 20px;
+}
+
+.inp_email::placeholder{
+    color: var(--cor-vermenho-claro);
+    font-size: 1em;
+    padding: 1em;
+}
+
+.imag_erro{
+    width: 2em;
+    position: absolute;
+    left: 15vw;
+    top: 7px;
+    display: none;
+}
+
+.des{
+    position: absolute;
+    left: 15vw;
+    width: 2em;
+    top: 7px;
+    display: block;
+}
+
+button{
+    position: absolute;
+    left: 17vw;
+    height: 5.6vh;
+    width: 5vw;
+    border-radius: 2em;
+    border: none;
+    background: var(--cor-vermenho-claro);
+    cursor: pointer;
+}
+
+ picture img{
+    height: 95vh;
+} 
+
+@media screen and (max-width: 950px){
+   .logo_imag{
+    padding: 3em 2rem;
+   }
+   h1{
+    font-size: 2em;
+    margin-left: 1em;
+   }
+   .texto{
+    margin-left: 1.3em;
+   }
+   .caixa_email{
+    margin-left: 1.3em;
+   }
+   .inp_email{
+     width: 29vw;
+     padding: 0;
+   }
+   button{
+    left: 25vw;
+   }
+   .des{
+    left: 21vw;
+   }
+}
+
+@media screen and (max-width: 802px){
+    .imagem_mob{
+        display: block;
+       }
+       .imagem_des{
+        display: none;
+       } 
+       h1{
+        font-size: 3.8em;
+        margin: 1em 1em;
+       }
+       .texto{
+        margin: 1em 0;
+       }
+       .inp_email{
+        width: 50vw;
+       }
+       button{
+        left: 45vw;
+        width: 4.5em;
+       }
+       .des{
+        left: 38vw;
+       }
+}
+
+@media screen and (max-width: 350px){
+    .imagem_mob{
+        margin: 0;
+    }
+    .texto{
+        padding: 0 3em;
+    }
+    .inp_email{
+        width: 90vw;
+    }
+    button{
+        left: 80vw;
+        width: 4em;
+    }
+    .caixa_email{
+        margin-left: 3em;
+        width: 58vw;
+    }
+    .des{
+        left: 68vw;
+    }
+}
+
